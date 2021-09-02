@@ -9,7 +9,7 @@ node available on docker hub.
 
 ```
 # clone the repo
-git clone https://github.com/xyder/docker-tiddly-server.git
+git clone https://github.com/mauloop/tiddlyserver-docker.git
 
 cd tiddlyserver-docker
 
