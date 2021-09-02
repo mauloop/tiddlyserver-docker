@@ -1,0 +1,91 @@
+{
+    //The JSON5 parser allows comments!
+    //All relative paths are relative to this file.
+    //The user directory prefix ~ is allowed.
+
+  
+    "$schema": "./tiddlyserver-2-2.schema.json",
+
+    "tree": {
+        "TW5": "/mnt/ts/TW5"
+    },
+
+    "bindInfo": {
+        // V V V V Uncomment one of the following V V V V 
+
+        //bind to localhost only (you can specify any other ip address in this array, and it will bind to all available addresses)
+        //"bindAddress": ["127.0.0.1"],
+        "port": 8080,
+
+        //bind to 0.0.0.0
+        "bindWildcard": true,
+
+        //workaround for android devices (bind to all available private ip addresses on startup)
+        // "bindWildcard": false, "bindAddress": ["192.168.0.0/16", "10.0.0.0/8", "172.31.0.0/16"], "filterBindAddress": true,
+
+        "filterBindAddress": false,
+        "enableIPv6": false,
+        "localAddressPermissions": {
+            "localhost": {
+                "datafolder": true,
+                "mkdir": true,
+                "putsaver": true,
+                "registerNotice": true,
+                "upload": true,
+                "websockets": true,
+                "writeErrors": true,
+                "loginlink": true,
+                "transfer": true
+            },
+            "*": {
+                "datafolder": true,
+                "mkdir": true,
+                "putsaver": true,
+                "registerNotice": true,
+                "upload": true,
+                "websockets": true,
+                "writeErrors": true,
+                "loginlink": true,
+                "transfer": true
+            }
+        },
+        "https": "",
+        "_bindLocalhost": false
+    },
+
+    "putsaver": {
+        "enabled": false,
+        "gzipBackup": true,
+        "etag": "disabled",
+        "etagWindow": 0,
+        "backupDirectory": ""
+    },
+
+    //"directoryIndex": {
+    //    "defaultType": "html",
+    //    "icons": {
+    //        "htmlfile": [ "html", "htm" ]
+    //    },
+    //    //"mimetypes": { "text/html": ["tw"] },
+    //    "mixFolders": false
+    //},
+
+    "putsaver": {
+        //single file wikis will backup to this directory on every save
+        "backupFolder": "./backups" // comment out or set to "" to disable backups
+    },
+
+    //"datafolder": {
+    //    "root-tiddler": "$:/core/save/all-external-js or whatever all your wikis use",
+    //    "other-tiddlywiki-server-variable": "anything tiddlywiki server understands",
+    //    "incorrect-server-variable": "tiddlyserver doesn't check the datafolder object",
+    //    "spread operator assignment": "it just ...vars it into the tiddlywiki server variables"
+    //},
+
+    "authCookieAge": 2592000,
+    "maxTransferRequests": 20,
+    "debugLevel": 0,
+    "_datafolderserver": "",
+    "_datafolderclient": ""
+    //"_datafoldertarget": "C:\\Users\\boero\\MK\\opt64\\tw5.1.22"
+}
