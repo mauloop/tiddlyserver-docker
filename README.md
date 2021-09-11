@@ -1,8 +1,6 @@
 # TiddlyServer Docker image
 
-Simple image to create a docker container for [TiddlyServer](https://github.com/Arlen22/TiddlyServer)
-
-Note: on build, it always uses the latest version from the default branch of TiddlyServer. It also uses the latest version of node available on docker hub.
+This is a simple Dockerfile to create a container for [TiddlyServer](https://github.com/Arlen22/TiddlyServer). It is based on [xyder/docker-tiddly-server](https://github.com/xyder/docker-tiddly-server), but uses the latest TiddlyServer release. Moreover a default Tiddlyserver config file file is provided, plus some options to allow custom paths for plugins, themes, languages and editions.
 
 ## Building the image:
 
@@ -42,7 +40,7 @@ To add your own or create a new one, copy it in `ts/TW5` subfolder and restart t
 ## Environment variables:
 
 Add `--env VAR=value` to the `docker run` command to override the following defaults (remembers paths must be in the `ts` subfolder and must be referred as `/mnt/ts/path`).
-Alternatively you can change defaults in Docker file and rebuild.
+Alternatively you can change defaults in Dockerfile and rebuild.
 
 ```
 TS_PORT=8080
@@ -51,7 +49,7 @@ TS_LOG_FILE=/mnt/ts/logs/ts.log
 ```
 
 Add `--env VAR=value` to the `docker run` command to set custom Tiddlywiki components paths (remembers paths must be in the `ts` subfolder and must be referred as `/mnt/ts/path`).
-Alternatively you can set defaults in Docker file and rebuild. Actual values are as from Tiddlywiki core settings.
+Alternatively you can set defaults in Dockerfile and rebuild. Actual values are as from Tiddlywiki core settings.
 
 ```
 TIDDLYWIKI_PLUGIN_PATH=/mnt/ts/plugins
