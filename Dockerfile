@@ -6,7 +6,7 @@ FROM node:alpine
 #ENV TIDDLYWIKI_EDITION_PATH=/mnt/ts/editions
 ENV TS_PORT=8080
 ENV TS_SETTINGS_FILE=/mnt/ts/settings.json
-ENV TS_LOG_FILE=/mnt/ts/log/ts.log
+ENV TS_LOG_FILE=/mnt/ts/logs/ts.log
 
 
 LABEL maintainer="Maurizio Boero <mauloop@gmail.com>"
