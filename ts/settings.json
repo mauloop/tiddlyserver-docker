@@ -14,8 +14,8 @@
         // V V V V Uncomment one of the following V V V V 
 
         //bind to localhost only (you can specify any other ip address in this array, and it will bind to all available addresses)
-        //"bindAddress": ["127.0.0.1"],
-        "port": 8080,
+        "bindAddress": ["127.0.0.1"],
+        //"port": 8080,
 
         //bind to 0.0.0.0
         "bindWildcard": true,
@@ -39,14 +39,14 @@
             },
             "*": {
                 "datafolder": true,
-                "mkdir": true,
-                "putsaver": true,
-                "registerNotice": true,
-                "upload": true,
-                "websockets": true,
-                "writeErrors": true,
-                "loginlink": true,
-                "transfer": true
+                "mkdir": false,
+                "putsaver": false,
+                "registerNotice": false,
+                "upload": false,
+                "websockets": false,
+                "writeErrors": false,
+                "loginlink": false,
+                "transfer": false
             }
         },
         "https": "",
