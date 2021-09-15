@@ -24,7 +24,6 @@ docker run \
 	--volume "`pwd`/ts:/mnt/ts" \
 	--publish "127.0.0.1:8080:8080" \
 	--user "$(id -u):$(id -g)" \
-	--env TIDDLYWIKI_PLUGIN_PATH=/mnt/ts/plugins \
 	mauloop/tiddlyserver
 ```
 
