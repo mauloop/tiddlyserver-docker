@@ -1,0 +1,1 @@
+This is the folder for logs path as defined in Dockerfile. To override default TS log path add `--env TS_LOG_FILE=/mnt/ts/path_to_logfile` to the `docker run` command (remember that paths must be in the `ts` subfolder and must be referred as `/mnt/ts/path`).
