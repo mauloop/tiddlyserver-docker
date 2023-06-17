@@ -5,7 +5,7 @@ This is a simple Dockerfile to create a container for [TiddlyServer](https://git
 * uses the latest TiddlyServer release.
 * a default basic Tiddlyserver config file file is provided.
 * runtime env vars are defined to allow custom paths for plugins, themes, languages and editions.
-* Tiddlywiki is updated to the latest release)[^1] (new).
+* Tiddlywiki is updated to the latest release[^1] (new).
 
 ## Building the image:
 
@@ -62,4 +62,4 @@ TIDDLYWIKI_LANGUAGE_PATH=/mnt/ts/languages
 TIDDLYWIKI_EDITION_PATH=/mnt/ts/editions
 ```
 
-[^1]: At the time I am writing this README, latest Tiddlyserver release is `2.2` beta (released on dec '20), which in turns provides Tiddlywiki `5.2.1`, while latest is `5.2.7`. It is not guaranteed that newer TW5 releases work, since they are not certified by Tiddlyserver author (@Arlen22). Otherwise there is no reason they should not. I ran TW `5.2.7` on TS `2.2 beta` and it looked like everything was ok. In any case you can force a specific TW5 release changing the Dockerfile line `RUN npm install tiddlywiki -g` to `RUN npm install tiddlywiki@5.2.5 -g` (if 5.2.5 i the TW5 release you would like), then rebuild the container.
+[^1]: At the time I am writing this README, latest Tiddlyserver release is `2.2` beta (released on dec '20), which in turns provides Tiddlywiki `5.2.1`, while latest is `5.2.7`. It is not guaranteed that newer TW5 releases work, since they are not certified by Tiddlyserver author. Otherwise there is no reason they should not. I ran TW `5.2.7` on TS `2.2 beta` and it looked like everything was ok. In any case you can force a specific TW5 release changing the Dockerfile line `RUN npm install tiddlywiki -g` to `RUN npm install tiddlywiki@5.2.5 -g` (if 5.2.5 is the TW5 release you would like), then rebuild the container.
