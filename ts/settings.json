@@ -85,7 +85,6 @@
     "authCookieAge": 2592000,
     "maxTransferRequests": 20,
     "debugLevel": 0,
-    "_datafolderserver": "",
+    "_datafolderserver": "/usr/local/lib/node_modules/tiddlywiki",
     "_datafolderclient": ""
-    //"_datafoldertarget": "C:\\Users\\boero\\MK\\opt64\\tw5.1.22"
 }
