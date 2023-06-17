@@ -14,6 +14,7 @@ LABEL maintainer="Maurizio Boero <mauloop@gmail.com>"
 VOLUME /mnt/ts
 
 RUN npm install tiddlyserver -g
+RUN npm install tiddlywiki -g
 
 RUN chmod 777 /usr/local/lib/node_modules/tiddlyserver/datafolder
 
